@@ -6,14 +6,11 @@ export const MessageList = () => {
     { name: "Andrea", text: "Bene" },
   ];
 
-  return(
-  
-    messages.map((text, name)) => {
-    return <Message name={name}>{text}</Message>;
-  })
-;
-  
- 
-  
-  
+  return messages.map((message, index) => {
+    return (
+      <Message key={index} name={message.name}>
+        {message.text}
+      </Message>
+    );
+  });
 };
